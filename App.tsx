@@ -16,9 +16,35 @@ const Stack = createNativeStackNavigator();
 function App(): React.JSX.Element {
   return (
     <NavigationContainer>
-      <Stack.Navigator>
-        <Stack.Screen name="Home" component={HomeScreen} />
-        <Stack.Screen name="Setting" component={SettingScreen} />
+      <Stack.Navigator
+        initialRouteName="Home"
+        screenOptions={{
+          // headerShown: false ,// hide headers globally
+          headerStyle: {
+            backgroundColor: '#1e90ff', // 🔵 background color
+          },
+          headerTintColor: '#fff', // 🎨 back button and title color
+          headerTitleStyle: {
+            fontWeight: 'bold', // 🔠 bold text
+            fontSize: 20,
+          },
+          headerTitleAlign: 'center', // 🧭 align title (left | center)
+        }}
+      >
+        <Stack.Screen
+          name="Home"
+          component={HomeScreen}
+          options={{headerShown: false}} // 👈 Hides the title/header
+        />
+        <Stack.Screen
+          name="Setting"
+          component={SettingScreen}
+          options={{title: 'Setting' , //  Custom Title
+            headerStyle: { backgroundColor: 'darkgreen' },
+            headerTintColor: '#fff',
+            headerTitleStyle: { fontSize: 18 },
+          }}
+        />
       </Stack.Navigator>
     </NavigationContainer>
   );
