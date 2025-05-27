@@ -5,22 +5,23 @@
  * @format
  */
 
+import {NavigationContainer} from '@react-navigation/native';
+import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import React from 'react';
-import {StyleSheet, Text, View} from 'react-native';
+import HomeScreen from './src/screen/HomeScreen';
+import SettingScreen from './src/screen/SettingScreen';
+
+const Stack = createNativeStackNavigator();
 
 function App(): React.JSX.Element {
   return (
-    <View style={styles.container}>
-      <Text>Hello World</Text>
-    </View>
+    <NavigationContainer>
+      <Stack.Navigator>
+        <Stack.Screen name="Home" component={HomeScreen} />
+        <Stack.Screen name="Setting" component={SettingScreen} />
+      </Stack.Navigator>
+    </NavigationContainer>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#ffffff',
-  },
-});
 
 export default App;
