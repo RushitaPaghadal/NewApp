@@ -7,15 +7,20 @@
 
 import {NavigationContainer} from '@react-navigation/native';
 import React from 'react';
+import 'react-native-reanimated'; // Mandate to import 
 
-import StackRoute from './src/Route/StackRoute';
-import TabRoute from './src/Route/TabRoute';
+// import StackRoute from './src/Route/StackRoute';
+// import TabRoute from './src/Route/TabRoute';
+import DrawerRoute from './src/Route/DrawerRoute';
 
 function App(): React.JSX.Element {
+  // console.disableYellowBox ();
+
   return (
     <NavigationContainer>
       {/* <StackRoute /> */}
-      <TabRoute />
+      {/* <TabRoute /> */}
+      <DrawerRoute />
     </NavigationContainer>
   );
 }
