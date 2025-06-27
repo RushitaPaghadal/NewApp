@@ -7,7 +7,7 @@
 
 import {NavigationContainer} from '@react-navigation/native';
 import React from 'react';
-import 'react-native-reanimated'; // Mandate to import 
+import 'react-native-reanimated'; // Mandate to import
 
 // import StackRoute from './src/Route/StackRoute';
 // import TabRoute from './src/Route/TabRoute';

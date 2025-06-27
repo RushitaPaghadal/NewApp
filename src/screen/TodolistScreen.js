@@ -45,7 +45,7 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
     marginBottom: 20,
   },
-  titleAlign : {textAlign: 'center'},
+  titleAlign: {textAlign: 'center'},
   todoItem: {
     flexDirection: 'row',
     justifyContent: 'space-between',

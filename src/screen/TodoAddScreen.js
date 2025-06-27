@@ -9,7 +9,7 @@ const TodoAddScreen = observer(({navigation}) => {
       <TextInput
         style={styles.input}
         value={TodoStore.newTodo}
-        onChangeText={(text) => TodoStore.setNewTodo(text)}
+        onChangeText={text => TodoStore.setNewTodo(text)}
         keyboardType="default"
         placeholder="Add a new task..."
       />
@@ -40,7 +40,6 @@ const styles = StyleSheet.create({
     paddingHorizontal: 20,
     borderRadius: 8,
     alignItems: 'center',
-    
   },
 });
 

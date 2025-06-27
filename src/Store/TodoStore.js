@@ -1,5 +1,5 @@
 import AsyncStorage from '@react-native-async-storage/async-storage';
-import { makeAutoObservable} from 'mobx';
+import {makeAutoObservable} from 'mobx';
 
 class TodoStore {
   todos = [];
@@ -7,7 +7,7 @@ class TodoStore {
 
   constructor() {
     makeAutoObservable(this);
-   this.getTodo();
+    this.getTodo();
   }
 
   setNewTodo(text) {
@@ -17,7 +17,6 @@ class TodoStore {
   async getTodo() {
     const jsonValue = await AsyncStorage.getItem('todosArray');
     this.todos = jsonValue != null ? JSON.parse(jsonValue) : [];
-
   }
 
   async addTodo() {
@@ -37,12 +36,11 @@ class TodoStore {
     const index = this.todos.findIndex(item => item.id === id);
     const updatedItems = [...this.todos]; // create a copy
 
-    updatedItems[index].text = text;  // modify the value
+    updatedItems[index].text = text; // modify the value
     this.todos = updatedItems;
 
     AsyncStorage.setItem('todosArray', JSON.stringify(this.todos));
     this.getTodo();
-
   }
 
   async removeTodo(id) {

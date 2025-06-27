@@ -12,9 +12,11 @@ const TabRoute = () => {
       <Tab.Screen
         name="Home"
         component={HomeScreen}
-        options={{
-        //   headerShown: false, // 👈 Hides the title/header
-        }}
+        options={
+          {
+            //   headerShown: false, // 👈 Hides the title/header
+          }
+        }
       />
       <Tab.Screen
         name="Setting"
