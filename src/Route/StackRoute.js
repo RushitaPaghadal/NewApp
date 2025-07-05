@@ -1,6 +1,5 @@
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import React from 'react';
-import {StyleSheet, View} from 'react-native';
 import TodolistScreen from '../screen/TodolistScreen';
 import TodoAddScreen from '../screen/TodoAddScreen';
 import TodoDetailScreen from '../screen/TodoDetailScreen';
@@ -61,7 +60,5 @@ const StackRoute = () => {
     </Stack.Navigator>
   );
 };
-
-const styles = StyleSheet.create({});
 
 export default StackRoute;
