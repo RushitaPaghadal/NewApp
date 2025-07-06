@@ -5,22 +5,24 @@
  * @format
  */
 
+import {NavigationContainer} from '@react-navigation/native';
 import React from 'react';
-import {StyleSheet, Text, View} from 'react-native';
+import 'react-native-reanimated'; // Mandate to import
+
+// import StackRoute from './src/Route/StackRoute';
+// import TabRoute from './src/Route/TabRoute';
+import DrawerRoute from './src/Route/DrawerRoute';
 
 function App(): React.JSX.Element {
+  // console.disableYellowBox ();
+
   return (
-    <View style={styles.container}>
-      <Text>Hello World</Text>
-    </View>
+    <NavigationContainer>
+      {/* <StackRoute /> */}
+      {/* <TabRoute /> */}
+      <DrawerRoute />
+    </NavigationContainer>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#ffffff',
-  },
-});
 
 export default App;
