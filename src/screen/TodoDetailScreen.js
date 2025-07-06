@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import {StyleSheet, Text, TextInput, View} from 'react-native';
+import {StyleSheet, TextInput, View} from 'react-native';
 import TouchButton from '../Component/TouchButton';
 import TodoStore from '../Store/TodoStore';
 import {useRoute} from '@react-navigation/native';

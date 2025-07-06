@@ -3,13 +3,15 @@
   "version": "0.0.1",
   "private": true,
   "scripts": {
+   
     "android": "react-native run-android",
     "ios": "react-native run-ios",
     "cleanGradle": "cd android && ./gradlew clean && cd .. ",
     "lint": "eslint .",
     "start": "react-native start",
     "test": "jest",
-    "format": "prettier --write ."
+    "format": "prettier --write .",
+    "postinstall": "husky"
   },
   "dependencies": {
     "@react-native-async-storage/async-storage": "2.1.2",
@@ -42,7 +44,8 @@
     "@types/jest": "^29.5.13",
     "@types/react": "^19.0.0",
     "@types/react-test-renderer": "^19.0.0",
-    "eslint": "^8.19.0",
+    "eslint": "^8.57.1",
+    "husky": "^9.1.7",
     "jest": "^29.6.3",
     "mobx": "^6.13.7",
     "mobx-react-lite": "^4.1.0",
