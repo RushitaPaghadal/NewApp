@@ -1,6 +1,5 @@
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 import React from 'react';
-import {StyleSheet, View} from 'react-native';
 import HomeScreen from '../screen/HomeScreen';
 import SettingScreen from '../screen/SettingScreen';
 
@@ -51,7 +50,5 @@ const TabRoute = () => {
     </Tab.Navigator>
   );
 };
-
-const styles = StyleSheet.create({});
 
 export default TabRoute;

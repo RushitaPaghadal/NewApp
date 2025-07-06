@@ -1,6 +1,6 @@
 import {observer} from 'mobx-react-lite';
 import React from 'react';
-import {Button, StyleSheet, Text, TextInput, View} from 'react-native';
+import {Button, StyleSheet, TextInput, View} from 'react-native';
 import TodoStore from '../Store/TodoStore';
 
 const TodoAddScreen = observer(({navigation}) => {
